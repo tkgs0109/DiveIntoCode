@@ -1,4 +1,4 @@
-【Git】基本コマンド
+<a href="http://qiita.com/konweb/items/621722f67fdd8f86a017" target="_blank">【Git】基本コマンド</a>from Qiita
 ## 基本コマンド
 ### ローカルリポジトリの作成
 初期化して、現在あるファイルを追加して、コミットすればOK   
@@ -288,7 +288,7 @@ git archive --format=zip --prefix=root/ v2.0 `git diff --name-only v1.0 v2.0` -o
 
 ---
 
-###無視するファイルの指定方法
+### 無視するファイルの指定方法
 .gitignoreファイルを使用する
 
 ```
