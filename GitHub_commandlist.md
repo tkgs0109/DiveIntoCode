@@ -1,6 +1,6 @@
 【Git】基本コマンド
 ## 基本コマンド
-###ローカルリポジトリの作成
+### ローカルリポジトリの作成
 初期化して、現在あるファイルを追加して、コミットすればOK   
 ファイルがなければ```git init```のみでOK
 
@@ -12,7 +12,7 @@ git commit -m "initial commit"
 
 ---
 
-###リモートリポジトリからプロジェクトをコピー
+### リモートリポジトリからプロジェクトをコピー
 ターミナルでローカルリポジトリに移動して以下のコマンド
 
 ```
@@ -22,7 +22,7 @@ git clone [リモートリポジトリパス] (例： https://github.com/jquery/
 
 ---
 
-###ファイル更新までの基本手順
+### ファイル更新までの基本手順
 ざっくりは以下の様な流れ   
 
 * ファイルを追加    
@@ -37,7 +37,7 @@ git push origin master  //masterを更新
 
 ---
 
-###git addの使用例
+### git addの使用例
 ```
 git add . //すべてのファイル・ディレクトリ
 git add *.css //すべてのCSSファイル
@@ -48,7 +48,7 @@ git rm --cached //addしてしまったファイルを除外
 
 ---
 
-###git commitの使用例
+### git commitの使用例
 ```
 git commit -a //変更のあったファイルすべて
 git commit --amend //直前のコミットを取り消す
@@ -57,7 +57,7 @@ git commit -v //変更点を表示してコミット
 
 ---
 
-###コミットの取り消し
+### コミットの取り消し
 ```
 git reset --soft HEAD~2 // 最新のコミットから2件分をワークディレクトリの内容を保持し取り消す
 git reset --hard HEAD~2 // 最新のコミットから2件分のワークディレクトリの内容とコミットを取り消す
@@ -65,7 +65,7 @@ git reset --hard HEAD~2 // 最新のコミットから2件分のワークディ�
 
 ---
 
-###コミットメッセージの修正
+### コミットメッセージの修正
 
 ```
 git rebase -i HEAD~2 // HEADから2件のコミットメッセージ
@@ -94,7 +94,7 @@ git rebase --continue
 
 ---
 
-###ブランチの作成/移動/削除/変更/一覧/
+### ブランチの作成/移動/削除/変更/一覧/
 ブランチは変更履歴を記録できる。
 > ![ブランチとは](http://www.backlog.jp/git-guide/img/post/stepup/capture_stepup1_1_1.png)    
 > [ブランチとは? サルでも分かるGit入門](http://www.backlog.jp/git-guide/stepup/stepup1_1.html)
@@ -112,7 +112,7 @@ git checkout -b branch_name origin/branch_name //リモートブランチへチ�
 
 ---
 
-###編集をマージ
+### 編集をマージ
 master以外のブランチで編集した箇所をmasterに反映させる
 
 ```
@@ -124,7 +124,7 @@ git merge [branch_name]  //差分をマージ
 git push origin master  //ファイルの更新
 ```
 
-###マージを取り消す
+### マージを取り消す
 コンフリクトが発生して一旦戻したい場合
 
 ```
@@ -133,7 +133,7 @@ git merge --abort
 
 ---
 
-###差分を確認する
+### 差分を確認する
 ```
 git diff
 git diff HEAD^ //最後のコミットからの差分を表示
@@ -144,7 +144,7 @@ git diff commit1 commit2 //コミットの差分
 
 ---
 
-###ログの表示
+### ログの表示
 
 ```
 git log //コミットのログが見れる
@@ -160,7 +160,7 @@ git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %Creset%s 
 
 ---
 
-###ファイルの名前変更
+### ファイルの名前変更
 ```
 git mv [変更前のファイル名] [変更後のファイル名]
 git commit -a -m "rename"
@@ -169,7 +169,7 @@ git push origin master
 
 ---
 
-###特定ファイルを特定のコミットに戻す
+### 特定ファイルを特定のコミットに戻す
 特定のコミットに戻してmasterに反映したい場合は以下のコマンドで。
 
 ```
@@ -180,7 +180,7 @@ git push origin master //変更をプッシュ
 
 ---
 
-###今やってる作業を一時退避する
+### 今やってる作業を一時退避する
 ```
 git stash
 git stash pop //戻す場合
@@ -190,7 +190,7 @@ git stash clear //退避の消去
 
 ---
 
-### タグ
+###  タグ
 ```
 git tag // タグの一覧表示
 git tag -l 'v1.*' // パターンでタグを検索
@@ -200,7 +200,7 @@ git push origin v0.0.0 // タグの共有
 
 ---
 
-###ファイルの削除
+### ファイルの削除
 ```
 git rm [name]  //特定のファイルorディレクトリの削除
 git rm *  //全ファイルorディレクトリ
@@ -210,11 +210,11 @@ chgit push origin master  //削除を反映
 
 ---
 
-### addの取り消し
+###  addの取り消し
 間違えて`git add`してしまった場合は`reset`でキャンセルできる。
 
 ```
-git reset HEAD 
+git reset HEAD
 git reset HEAD {file_name}
 ```
 
@@ -321,7 +321,7 @@ git update-index --no-skip-worktree [ファイル名]
 詳しくは→ <a href="http://qiita.com/usamik26/items/56d0d3ba7a1300625f92" target="_blank">既に git 管理しているファイルをあえて無視したい</a>
 
 ---
- 
+
 ### .gitignoreに記述されているファイルを管理対象から外す
 ```
 git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`
