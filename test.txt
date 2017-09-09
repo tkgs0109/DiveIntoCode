@@ -1,1 +1,3 @@
 WinノートPCからのリモートテスト
+
+test commit from XPS13
