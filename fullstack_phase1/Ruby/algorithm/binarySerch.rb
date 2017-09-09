@@ -7,7 +7,8 @@ low_number = 0
 high_number = list.length
 n = 0
 
-while low_number != high_number do
+# while low_number != high_number do
+while true
   n += 1
   puts("#{n}回目の探索です")
   center_number = ((low_number + high_number) / 2).floor
