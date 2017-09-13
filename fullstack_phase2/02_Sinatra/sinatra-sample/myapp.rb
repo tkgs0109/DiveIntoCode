@@ -21,6 +21,10 @@ get '/b' do
   erb :b
 end
 
-get 'c' do
+get '/c' do
   erb :c
+end
+
+post '/a' do
+  erb :a
 end
