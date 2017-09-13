@@ -20,3 +20,7 @@ end
 get '/b' do
   erb :b
 end
+
+get 'c' do
+  erb :c
+end
