@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>お問い合わせ一覧</h1>
+  <form action="/a">
+    <table class="contact">
+      <tr>
+        <th>お名前</th>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <th>性別</th>
+        <td>
+          <input type="radio" name="gender">男
+          <input type="radio" name="gender">女
+        </td>
+      </tr>
+      <tr>
+        <th>お問い合わせ内容</th>
+        <td>
+          <textarea cols=40 rows=4 name="contact_content"></textarea>
+        </td>
+      </tr>
+    </table>
+    <div class=submit_button_area>
+      <input type="submit" name="submit" id="submit_button" value="送信">
+    </div>
+  </form>
+</html>
