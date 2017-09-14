@@ -16,6 +16,11 @@ h1{
   font-size: 3rem;
 }
 
+.error_msg{
+  font-size: 1.5rem;
+  color: #ff0000;
+}
+
 a {
   font-size: 1.5rem;
 }

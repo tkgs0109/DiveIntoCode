@@ -9,5 +9,10 @@ post '/users/confirm' do
   @name    = params['name']
   @email   = params['email']
   @password = params['password']
-  erb :user_confirm
+  if @name.empty? || @email.empty? || @password.empty?
+    @error_msg = "値を入力してください"
+    erb :form
+  else
+    erb :user_confirm
+  end
 end

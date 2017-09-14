@@ -3,6 +3,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/users.css">
   </head>
+  <% securePasswd = "" %>
+  <% for i in 1..(@password.length) do %>
+  <%   securePasswd << "*" %>
+  <% end %>
   <body>
     <div class="container">
       <h1>登録確認</h1>
@@ -23,7 +27,7 @@
         <tr>
           <th>パスワード</th>
           <td>
-            <%= @password %>
+            <%= securePasswd %>
           </td>
         </tr>
       </table>
