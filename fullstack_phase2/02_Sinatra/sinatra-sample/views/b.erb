@@ -5,5 +5,9 @@
   <body>
     <h1>Bページ</h1>
     <a href="/c">cページへ</a>
+    <% blogs = ["ブログ1","ブログ2","ブログ3"] %>
+    <% blogs.each do |blog| %>
+      <%= blog %>
+    <% end %>
   </body>
 </html>

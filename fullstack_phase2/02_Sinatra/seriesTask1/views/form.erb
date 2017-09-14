@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/users.css">
+</head>
+<body>
+  <div class="container">
+    <h1>新規登録</h1>
+    <form action="/users/confirm" method="POST">
+      <table class="form_registration">
+        <tr>
+          <th>お名前</th>
+          <td>
+            <input type="text" name="name">
+          </td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td>
+            <input type="text" name="email">
+          </td>
+        </tr>
+        <tr>
+          <th>パスワード</th>
+          <td>
+            <input type="password" name="password">
+          </td>
+        </tr>
+      </table>
+      <div class=submit_button_area>
+        <input type="submit" name="submit" id="submit_button" value="送信">
+      </div>
+    </form>
+  </div>
+</html>

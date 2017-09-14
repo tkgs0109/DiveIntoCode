@@ -4,8 +4,8 @@
 </head>
 <body>
   <h1>お問い合わせ一覧</h1>
-  <form action="/a" method="POST">
-    <table class="contact">
+  <form action="/contacts" method="POST">
+    <table class="form_contact">
       <tr>
         <th>お名前</th>
         <td>
@@ -19,16 +19,9 @@
         </td>
       </tr>
       <tr>
-        <th>性別</th>
-        <td>
-          <input type="radio" name="gender">男
-          <input type="radio" name="gender">女
-        </td>
-      </tr>
-      <tr>
         <th>お問い合わせ内容</th>
         <td>
-          <textarea cols=40 rows=4 name="contact"></textarea>
+          <textarea cols=40 rows=4 name="content"></textarea>
         </td>
       </tr>
     </table>

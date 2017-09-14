@@ -14,9 +14,6 @@ get '/blogs' do
 end
 
 get '/a' do
-  @name    = params['name']
-  @email   = params['email']
-  @content = params['content']
   erb :a
 end
 
@@ -28,6 +25,9 @@ get '/c' do
   erb :c
 end
 
-post '/a' do
-  erb :a
+post '/contacts' do
+  @name    = params['name']
+  @email   = params['email']
+  @content = params['content']
+  erb :contacts_confirm
 end

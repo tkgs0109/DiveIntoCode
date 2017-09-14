@@ -1,0 +1,43 @@
+html{
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body{
+  height: 100%;
+}
+
+.container{
+  width: 450px;
+  min-height: 100%;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+a {
+  font-size: 1.5rem;
+}
+
+.form_registration tr{
+  height: 3rem;
+}
+
+.form_registration th{
+  width: 140px;
+  text-align: right;
+}
+
+.form_registration td{
+  padding: 10px;
+
+}
+
+.form_registration td input{
+  width: 300px;
+}
+
+.submit_button_area{
+  text-align: center;
+}
