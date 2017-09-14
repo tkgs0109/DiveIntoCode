@@ -14,6 +14,9 @@ get '/blogs' do
 end
 
 get '/a' do
+  @name    = params['name']
+  @email   = params['email']
+  @content = params['content']
   erb :a
 end
 
