@@ -1,1 +1,1 @@
-puts ("hogehogehoge")
+puts "hagehagehage"
