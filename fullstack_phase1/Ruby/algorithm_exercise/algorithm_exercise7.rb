@@ -1,3 +1,5 @@
+# 問題点1~3以外を入力したときも処理が進んでしまうよ
+
 def rpsGame(num)
   cpu = rand(3) + 1 
   result = ( num - cpu + 3 ) % 3
@@ -11,6 +13,7 @@ while true
   puts "1: グー"
   puts "2: チョキ"
   puts "3: パー"
+  # 配列にしてeach.doで表示したらRubyっぽくていい
   
   num = gets.to_i
   cpu, result = rpsGame(num)
