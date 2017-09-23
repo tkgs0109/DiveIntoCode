@@ -13,7 +13,7 @@ def isPrime( x )
   end
 end
 
-
+print("x=")
 x = gets.to_i
 
 p isPrime(x)
