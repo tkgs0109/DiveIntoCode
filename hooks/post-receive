@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd /home/tkgs0109/codes/DiveIntoCode
-git --git-dir=.git pull
