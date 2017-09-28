@@ -90,7 +90,7 @@ Rails.application.routes.draw do
 end
 ```
 
-## Rails入門4
+## Rails基礎4
 ### 下記のようなコントローラーがあり、そのコントローラーのeditアクションが実行された場合、どのようなビューが呼び出されるか
 ```rb
 class BlogsController < ApplicationController
@@ -102,5 +102,65 @@ end
 Railsはコントローラ名とメソッド名からrenderメソッドを記載しなくても自動的にレンダリングするビューを特定します。
 `app/views/コントローラ名/メソッド名.html.erb`を呼び出します。
 
-## Rails入門5
+## Rails基礎5
 ### 【応用】O/Rマッピングとはなにか
+RDBレコードをオブジェクトとして扱えるように変換している。
+プログラマはSQLを意識することなくコーディングできる。
+
+### 実際に自分でdatabase.ymlの設定をすることになった場合、どのようなドキュメントを読めばよいか
+
+
+## Rails基礎6
+### 【応用】sudoコマンドが出てきたが、どのようなコマンドか
+root権限で実行する
+> sudoは，指定したユーザーでコマンドを実行する。
+> デフォルトではroot権限で実行する。
+
+### 【応用】serviceコマンドが出てきたが、どのようなコマンドか
+存在するserviceに対し、起動、停止や再起動などオペレーションを行う。
+
+### 【応用】データベースを作成するコマンドは`rails db:create`だが、削除するコマンドは何か
+```rb
+rails db:drop
+```
+
+## Rails基礎7
+### カラム名を変更したい場合、マイグレーションファイル名はどのような名前にするべきか、今回はblogsテーブルのtitleカラムをnameカラムに変更したい。
+```rb
+rails generate migration rename_title_column_to_blogs
+```
+
+## Rails基礎8
+### 【応用】マイグレーションをすべてやり直すコマンドを調べよ
+```rb
+rake db:migrate:reset
+```
+
+## Rails基礎9
+### 【応用】カラム名を変更したい場合、マイグレーションファイルにどのように記述すればよいか、今回はblogsテーブルのtitleカラムをnameカラムに変更したい。
+
+```rb
+class RenameTitleColumnToBlogs < ActiveRecord::Migration
+  def change
+    rename_column :blogs, :title, :name
+  end
+end
+```
+
+## Rails基礎10
+### `schema.rb`を見て、テーブルの状態を確認するは、SQLを使用してテーブルの状態を確認する場合とくらべてどのようなメリットがあるか
+> スキーマファイルは、Active Recordのオブジェクトにどのような属性があるのかを概観するのに便利です。
+> スキーマ情報は多くのマイグレーションに分かれて存在しており、
+> そのままでは非常に探しにくいですが、スキーマファイルにコンパクトにまとまっています。
+
+### 【応用】実は、schema.rbの役割はテーブルの状態を確認するだけではない、schema.rbが他にどのような役割を担っているか調べよ
+```
+rake db:schema:dump
+```
+`db:migrate`、`db:rollback` などが依存している。
+現在のスキーマからschema.rbを作成する。
+```
+rake db:schema:load
+```
+`db:setup`、`db:reset` などが依存している。
+schema.rbからテーブルを作成する。
